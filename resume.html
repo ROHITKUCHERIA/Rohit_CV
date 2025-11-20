@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohit Kucheria - Backend Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .resume-container {
+            max-width: 1230px;
+            margin: 30px auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .header {
+            background-color: #244B59;
+            color: white;
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 15px;
+            background-color: #5DA6A3;
+        }
+        
+        .name {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .title {
+            font-size: 22px;
+            color: #5DA6A3;
+            margin-bottom: 20px;
+        }
+        
+        .summary {
+            font-size: 16px;
+            max-width: 70%;
+            line-height: 1.5;
+        }
+        
+        .contact-info {
+            position: absolute;
+            right: 30px;
+            top: 30px;
+            text-align: right;
+        }
+        
+        .contact-info div {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        
+        .contact-info i {
+            margin-left: 10px;
+            color: #5DA6A3;
+        }
+        
+        .content {
+            display: flex;
+        }
+        
+        .left-column {
+            flex: 7;
+            padding: 30px;
+        }
+        
+        .right-column {
+            flex: 5;
+            background-color: #F2F6F7;
+            padding: 30px;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section-title {
+            font-size: 22px;
+            color: #244B59;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #5DA6A3;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        
+        .job, .education-item {
+            margin-bottom: 25px;
+        }
+        
+        .job-header, .education-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+        
+        .job-title, .education-degree {
+            font-weight: 600;
+            font-size: 18px;
+            color: #244B59;
+        }
+        
+        .company, .institution {
+            font-style: italic;
+            color: #5DA6A3;
+        }
+        
+        .date {
+            color: #6E7B86;
+            font-size: 14px;
+        }
+        
+        .location {
+            color: #6E7B86;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        
+        .responsibilities-title {
+            color: #5DA6A3;
+            font-style: italic;
+            margin: 10px 0 5px;
+        }
+        
+        ul {
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 5px;
+        }
+        
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .skill-tag {
+            background-color: #2F3B45;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .project {
+            margin-bottom: 20px;
+        }
+        
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+        
+        .project-title {
+            font-weight: 600;
+            color: #244B59;
+        }
+        
+        .project-date {
+            color: #6E7B86;
+            font-size: 14px;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #f0f0f0;
+            color: #6E7B86;
+            font-size: 14px;
+            border-top: 1px solid #ddd;
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+            
+            .contact-info {
+                position: static;
+                text-align: left;
+                margin-top: 20px;
+            }
+            
+            .summary {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <div class="header">
+            <h1 class="name">Rohit Kucheria</h1>
+            <h2 class="title">BackEnd Developer</h2>
+            <p class="summary">Results-driven Backend Developer with 4+ years of expertise in Laravel, PHP, Node.js, and cloud technologies. Proficient in REST API development, database management (MySQL, PostgreSQL), and cloud migration to Azure. Experienced in implementing CI/CD pipelines, Docker containerization, and microservices architecture. Seeking to leverage technical skills in software engineering, system optimization, and cloud solutions to drive innovation and deliver scalable applications.</p>
+            <div class="contact-info">
+                <div><span>rohitkucheria16@gmail.com</span> <i class="fas fa-envelope"></i></div>
+                <div><span>9351163747</span> <i class="fas fa-mobile-alt"></i></div>
+                <div><span>Hyderabad, India</span> <i class="fas fa-map-marker-alt"></i></div>
+                <div><span>linkedin.com/in/rohit-kucheria</span> <i class="fab fa-linkedin"></i></div>
+                <div><span>github.com/ROHITKUCHERIA</span> <i class="fab fa-github"></i></div>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="left-column">
+                <div class="section">
+                    <h3 class="section-title">Work Experience</h3>
+                    
+                    <div class="job">
+                        <div class="job-header">
+                            <div>
+                                <div class="job-title">Software Engineer (BackEnd Developer)</div>
+                                <div class="company">People Tech Group</div>
+                            </div>
+                            <div class="date">03/2025 - Present</div>
+                        </div>
+                        <div class="location">Hyderabad, India</div>
+                        <div class="responsibilities-title">Roles & Responsibilities</div>
+                        <ul>
+                            <li>Migrated all data and codebase from VMax servers to Azure Cloud Services</li>
+                            <li>Implemented CI/CD pipelines for automated deployment processes</li>
+                            <li>Created and managed Docker images for Laravel modules and applications</li>
+                            <li>Designed and managed release artifacts and deployment strategies</li>
+                            <li>Optimized cloud infrastructure for better performance and cost efficiency</li>
+                            <li>Collaborated with cross-functional teams to ensure smooth migration process</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="job">
+                        <div class="job-header">
+                            <div>
+                                <div class="job-title">Senior Software Engineer (BackEnd Developer)</div>
+                                <div class="company">VMax e-Solutions India Private Limited</div>
+                            </div>
+                            <div class="date">09/2023 - 03/2025</div>
+                        </div>
+                        <div class="location">Hyderabad, India</div>
+                        <div class="responsibilities-title">Roles & Responsibilities</div>
+                        <ul>
+                            <li>Performed code reviews and optimization for enhanced performance</li>
+                            <li>Managed requirement analysis, client handling, and project coordination</li>
+                            <li>Developed backend processes for web applications using Laravel and Node.js</li>
+                            <li>Worked effectively both independently and as part of a team</li>
+                            <li>Maintained version control using GitHub and implemented best practices</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="job">
+                        <div class="job-header">
+                            <div>
+                                <div class="job-title">Associate Engineer (BackEnd Developer)</div>
+                                <div class="company">SUCCESSIVE DIGITAL PVT. LTD.</div>
+                            </div>
+                            <div class="date">08/2021 - 09/2023</div>
+                        </div>
+                        <div class="location">Noida, India</div>
+                        <div class="responsibilities-title">Roles & Responsibilities</div>
+                        <ul>
+                            <li>Developed backend processes for web applications using PHP and Laravel</li>
+                            <li>Solved technical problems and coordinated project execution</li>
+                            <li>Performed bug fixing and maintenance of existing systems</li>
+                            <li>Translated designs and wireframes into high-quality, responsive code</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h3 class="section-title">Education</h3>
+                    
+                    <div class="education-item">
+                        <div class="education-header">
+                            <div>
+                                <div class="education-degree">B.Tech CSE</div>
+                                <div class="institution">Swami Keshvanand Institute of Technology, Jaipur - (67.7%)</div>
+                            </div>
+                            <div class="date">06/2017 - 06/2021</div>
+                        </div>
+                        <div class="location">Jaipur, India</div>
+                    </div>
+                    
+                    <div class="education-item">
+                        <div class="education-header">
+                            <div>
+                                <div class="education-degree">Higher Secondary Education</div>
+                                <div class="institution">DAV Senior Secondary School - (76.40%)</div>
+                            </div>
+                            <div class="date">03/2016 - 03/2017</div>
+                        </div>
+                        <div class="location">Sri Ganganagar, Rajasthan</div>
+                    </div>
+                    
+                    <div class="education-item">
+                        <div class="education-header">
+                            <div>
+                                <div class="education-degree">Secondary Education</div>
+                                <div class="institution">DAV Senior Secondary School - (74.60%)</div>
+                            </div>
+                            <div class="date">06/2014 - 06/2015</div>
+                        </div>
+                        <div class="location">Sri Ganganagar, Rajasthan</div>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h3 class="section-title">Professional Summary</h3>
+                    <ul>
+                        <li>Requirement analysis, backend design and implementation</li>
+                        <li>Code reviews, performance optimization and bug fixing</li>
+                        <li>Cloud migration and CI/CD pipeline implementation</li>
+                        <li>Client interaction and project coordination</li>
+                        <li>Team collaboration and technical leadership</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="right-column">
+                <div class="section">
+                    <h3 class="section-title">Technical Skills</h3>
+                    <div class="skills-container">
+                        <div class="skill-tag">Laravel</div>
+                        <div class="skill-tag">PHP</div>
+                        <div class="skill-tag">ASP .Net</div>
+                        <div class="skill-tag">PostgreSQL</div>
+                        <div class="skill-tag">MySQL</div>
+                        <div class="skill-tag">GIT</div>
+                        <div class="skill-tag">HTML</div>
+                        <div class="skill-tag">CSS</div>
+                        <div class="skill-tag">NodeJS</div>
+                        <div class="skill-tag">JavaScript</div>
+                        <div class="skill-tag">Docker</div>
+                        <div class="skill-tag">JQuery</div>
+                        <div class="skill-tag">Ajax</div>
+                        <div class="skill-tag">Azure DevOps</div>
+                        <div class="skill-tag">CI/CD</div>
+                        <div class="skill-tag">REST APIs</div>
+                        <div class="skill-tag">Cloud Migration</div>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h3 class="section-title">Projects</h3>
+                    
+                    <div class="project">
+                        <div class="project-header">
+                            <div class="project-title">KONU - Phase 2 (People Tech)</div>
+                            <div class="project-date">03/2025 - Present</div>
+                        </div>
+                        <ul>
+                            <li>Migrated entire platform to Azure Cloud with zero downtime</li>
+                            <li>Implemented CI/CD pipelines for automated testing and deployment</li>
+                            <li>Containerized Laravel modules using Docker for scalability</li>
+                            <li>Enhanced platform performance with cloud-native solutions</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project">
+                        <div class="project-header">
+                            <div class="project-title">KONU - Phase 1 (VMax)</div>
+                            <div class="project-date">10/2023 - 03/2025</div>
+                        </div>
+                        <ul>
+                            <li>Developed comprehensive Real Estate Platform from scratch</li>
+                            <li>Implemented transparent buyer-seller interaction features</li>
+                            <li>Built real-time property monitoring system for owners</li>
+                            <li>Created market accessibility with detailed property information</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project">
+                        <div class="project-header">
+                            <div class="project-title">GPS TG CDMA</div>
+                            <div class="project-date">08/2024 - 12/2024</div>
+                        </div>
+                        <ul>
+                            <li>Government project for tracking Telangana's waste management vehicles via GPS</li>
+                            <li>Automated daily active/inactive vehicle reports for CDMA office</li>
+                            <li>Implemented live vehicle tracking with map-based visualization</li>
+                            <li>Developed district-wise logins and customized regional features</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project">
+                        <div class="project-header">
+                            <div class="project-title">HRMS</div>
+                            <div class="project-date">06/2022 - 08/2023</div>
+                        </div>
+                        <ul>
+                            <li>Streamlined employee onboarding process with automated workflows</li>
+                            <li>Implemented probation management system with tracking capabilities</li>
+                            <li>Developed pre-exit process automation for employee offboarding</li>
+                            <li>Created module-wise dashboards and comprehensive reporting system</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project">
+                        <div class="project-header">
+                            <div class="project-title">NMRC (Noida Metro)</div>
+                            <div class="project-date">06/2022 - 01/2023</div>
+                        </div>
+                        <ul>
+                            <li>Developed e-ticketing management system with secure payment integration</li>
+                            <li>Implemented comprehensive reporting for yearly and monthly analytics</li>
+                            <li>Tracked cost-to-company metrics and financial performance</li>
+                            <li>Created user-friendly web interface for seamless customer experience</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project">
+                        <div class="project-header">
+                            <div class="project-title">PMO (Performance Management System)</div>
+                            <div class="project-date">08/2021 - 05/2022</div>
+                        </div>
+                        <ul>
+                            <li>Built performance tracking system for HR, managers, and BU managers</li>
+                            <li>Implemented one-to-one meeting notes functionality for employees</li>
+                            <li>Developed year-end goal setting and progress tracking features</li>
+                            <li>Created comprehensive BU-wise and employee-wise reporting system</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            Email: rohitkucheria16@gmail.com | Phone: 9351163747 | Hyderabad, India
+        </div>
+    </div>
+</body>
+</html>
